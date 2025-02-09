@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: user
+    password: password
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+server:
+  port: 8079
+
+app:
+  security:
+    secret_key: '85359d23f00b26b566f9f1a2bdc179e113e9e2fce544c3fec8ebb32083ff55ec'
+    jwt_ttl_by_hour: 24
