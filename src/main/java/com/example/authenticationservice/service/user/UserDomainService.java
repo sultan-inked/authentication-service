@@ -22,4 +22,9 @@ public class UserDomainService {
     public User save(User user) {
         return userRepository.save(user);
     }
+
+    @Transactional(readOnly = true)
+    public boolean existsByUsername(String username) {
+        return userRepository.existsByUsername(username);
+    }
 }

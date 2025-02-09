@@ -9,8 +9,9 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class RegisterRequestDto {
+public class ChangePasswordRequestDto {
     private String username;
-    private String password;
+    private String currentPassword;
+    private String newPassword;
     private String confirmationPassword;
 }
